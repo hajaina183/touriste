@@ -4,13 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.Switch;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -92,6 +97,34 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 btnSendPostRequestCliqued();
+            }
+        });
+
+        ListView listView = findViewById(R.id.listview);
+
+        List<String> list = new ArrayList<>();
+        list.add("Apple");
+        list.add("Orange");
+        list.add("Banana");
+        list.add("Grapes");
+
+        ArrayAdapter arrayAdapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_list_item_1,list);
+        listView.setAdapter(arrayAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if(position==0){
+                    //clicked apple
+
+                    startActivity(new Intent(MainActivity.this,AppleActivity.class));
+
+                }else if(position==1){
+                    //clicked orange
+                    startActivity(new Intent(MainActivity.this,OrangeActivity.class));
+                }else{
+
+                }
             }
         });
     }
