@@ -48,10 +48,11 @@
 
         <androidx.appcompat.widget.AppCompatButton
             style="@style/BUTTON"
+            android:id="@+id/getData"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="8dp"
-            android:text="Button" />
+            android:text="Get data" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

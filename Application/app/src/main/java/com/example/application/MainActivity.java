@@ -6,11 +6,21 @@ import androidx.appcompat.app.AppCompatDelegate;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Switch;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Button getData;
+    private static final String TAG = "MainActivity";
     Switch switcher;
     boolean nightMode;
     SharedPreferences sharedPreferences;
@@ -44,6 +54,35 @@ public class MainActivity extends AppCompatActivity {
                     editor.putBoolean("night", true);
                 }
                 editor.apply();
+            }
+        });
+
+        getData = findViewById(R.id.getData);
+        getData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Methods methods = RetrofitClient.getRetrofitInstance().create(Methods.class);
+                Call<List<Model>> call = methods.getAllData();
+
+                call.enqueue(new Callback<List<Model>>() {
+                    @Override
+                    public void onResponse(Call<List<Model>> call, Response<List<Model>> response) {
+                        Log.e(TAG, "onResponse: code : "+ response.code());
+
+                        List<Model> datas = response.body();
+                        for (int i = 0; i < datas.size(); i++) {
+                            Log.e(TAG, "onResponse: name : "+datas.get(i).getName());
+                            Log.e(TAG, "onResponse: office : "+datas.get(i).getOffice());
+                            Log.e(TAG, "onResponse: position : "+datas.get(i).getPosition());
+                            Log.e(TAG, "onResponse: salary : "+datas.get(i).getSalary());
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<List<Model>> call, Throwable t) {
+                        Log.e(TAG, "onFailure: "+t.getMessage());
+                    }
+                });
             }
         });
     }
