@@ -20,6 +20,7 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity {
 
     private Button getData;
+    private Button btnSendPostRequest;
     private static final String TAG = "MainActivity";
     Switch switcher;
     boolean nightMode;
@@ -83,6 +84,31 @@ public class MainActivity extends AppCompatActivity {
                         Log.e(TAG, "onFailure: "+t.getMessage());
                     }
                 });
+            }
+        });
+
+        btnSendPostRequest = findViewById(R.id.btnSendPostRequest);
+        btnSendPostRequest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                btnSendPostRequestCliqued();
+            }
+        });
+    }
+
+    private void btnSendPostRequestCliqued() {
+        Methods methods = RetrofitClient.getRetrofitInstance().create(Methods.class);
+        Call<Model> call = methods.getModelInformation("Mimi", "CEO", "Bold entreprise", "20000000");
+        call.enqueue(new Callback<Model>() {
+            @Override
+            public void onResponse(Call<Model> call, Response<Model> response) {
+                Log.e(TAG, "onResponse: code : "+response.code());
+                Log.e(TAG, "onResponse: name : "+response.body().getName());
+            }
+
+            @Override
+            public void onFailure(Call<Model> call, Throwable t) {
+                Log.e(TAG, "onFailure: "+t.getMessage());
             }
         });
     }

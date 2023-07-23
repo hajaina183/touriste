@@ -9,6 +9,7 @@ var olonaController = require('./controllers/olonaController.js');
 var app = express();
 app.use(bodyParser.json());
 app.use(cors({ origin: '*' }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.listen( process.env.PORT || 3000, () => console.log('Server started at port : 3000'));
 

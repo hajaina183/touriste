@@ -7,6 +7,21 @@ public class Model {
     String office;
     Double salary;
 
+    public Model(String id, String name, String position, String office, Double salary) {
+        this.id = id;
+        this.name = name;
+        this.position = position;
+        this.office = office;
+        this.salary = salary;
+    }
+
+    public Model(String name, String position, String office, Double salary) {
+        this.name = name;
+        this.position = position;
+        this.office = office;
+        this.salary = salary;
+    }
+
     public String getId() {
         return id;
     }

@@ -53,6 +53,14 @@
             android:layout_height="50dp"
             android:layout_margin="8dp"
             android:text="Get data" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/BUTTON"
+            android:id="@+id/btnSendPostRequest"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:text="send post request" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
