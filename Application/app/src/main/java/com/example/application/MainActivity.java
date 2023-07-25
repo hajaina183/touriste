@@ -15,6 +15,11 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Switch;
 
+import com.example.application.controler.Methods;
+import com.example.application.controler.ProfilControler;
+import com.example.application.model.Model;
+import com.example.application.model.Profil;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -130,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void btnSendPostRequestCliqued() {
-        Methods methods = RetrofitClient.getRetrofitInstance().create(Methods.class);
+        /*Methods methods = RetrofitClient.getRetrofitInstance().create(Methods.class);
         Call<Model> call = methods.getModelInformation("Mimi", "CEO", "Bold entreprise", "20000000");
         call.enqueue(new Callback<Model>() {
             @Override
@@ -143,6 +148,18 @@ public class MainActivity extends AppCompatActivity {
             public void onFailure(Call<Model> call, Throwable t) {
                 Log.e(TAG, "onFailure: "+t.getMessage());
             }
+        }); */
+        Profil profil = new Profil();
+        profil.traitementLogin("jayks", "12345", new Profil.LoginCallback() {
+            @Override
+            public void onLoginResult(boolean isSuccess) {
+                if (isSuccess) {
+                    Log.i(TAG, "onLoginResult: success");
+                } else {
+                    Log.e(TAG, "onLoginResult: error");
+                }
+            }
         });
+
     }
 }
