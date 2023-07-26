@@ -127,6 +127,9 @@ public class MainActivity extends AppCompatActivity {
                 }else if(position==1){
                     //clicked orange
                     startActivity(new Intent(MainActivity.this,OrangeActivity.class));
+                }else if(position==2){
+                    //clicked orange
+                    startActivity(new Intent(MainActivity.this,Acceuil.class));
                 }else{
 
                 }

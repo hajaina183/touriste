@@ -44,6 +44,7 @@ public class LoginActivity extends AppCompatActivity {
                     public void onLoginResult(boolean isSuccess) {
                         if (isSuccess) {
                             Log.i(TAG, "onLoginResult: success");
+                            startActivity(new Intent(LoginActivity.this,Acceuil.class));
                         } else {
                             Log.e(TAG, "onLoginResult: error");
                         }

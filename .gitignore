@@ -1,0 +1,4 @@
+# Ignore the node_modules directory
+Application/.gradle/
+Application/.idea/
+Application/app/build/
