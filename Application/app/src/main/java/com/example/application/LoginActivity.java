@@ -52,7 +52,8 @@ public class LoginActivity extends AppCompatActivity {
                 });
             }
         });
-
-
+    }
+    public void inscription(View view){
+        startActivity(new Intent(  LoginActivity.this,Inscription.class));
     }
 }
