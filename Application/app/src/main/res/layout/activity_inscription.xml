@@ -238,7 +238,7 @@
                             android:layout_margin="20dp"
                             android:backgroundTint="@color/button_color"
                             android:padding="20dp"
-                            android:text="se connecter"
+                            android:text="s'inscrire"
                             android:textColor="@color/black"
                             android:fontFamily="@font/dm_medium"
                             android:textSize="18sp"

@@ -92,6 +92,10 @@ public class Profil {
         void onLoginResult(boolean isSuccess);
     }
 
+    public interface InscriptionCallBack {
+        void onLoginResult(boolean isSuccess);
+    }
+
 
     public void traitementLogin(String user, String mdp, final LoginCallback callback) {
         ProfilControler profilControler = RetrofitClient.getRetrofitInstance().create(ProfilControler.class);
@@ -101,6 +105,7 @@ public class Profil {
             public void onResponse(Call<Profil> call, Response<Profil> response) {
                 if (response.isSuccessful()) {
                     if(response.body().getNom() != null && !response.body().getNom().isEmpty()) {
+
                         callback.onLoginResult(true);
                     } else {
                         callback.onLoginResult(false);
@@ -139,5 +144,33 @@ public class Profil {
             e.printStackTrace();
             return false;
         }
+    }
+
+    public void inscription(String nom, String prenom , String adresse , String user , String password,final InscriptionCallBack callBack ){
+        ProfilControler profilControler = RetrofitClient.getRetrofitInstance().create(ProfilControler.class);
+        Call<Profil> call = profilControler.inscription(nom,prenom,adresse,user,password);
+        call.enqueue(new Callback<Profil>() {
+            @Override
+            public void onResponse(Call<Profil> call, Response<Profil> response) {
+                if (response.isSuccessful()) {
+                    if(response.body().getNom() != null && !response.body().getNom().isEmpty()) {
+
+                        callBack.onLoginResult(true);
+                    } else {
+                        callBack.onLoginResult(false);
+                    }
+                } else {
+                    Log.e(TAG, "traitementLogin: Code d'erreur : " + response.code());
+                    callBack.onLoginResult(false);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Profil> call, Throwable t) {
+                t.printStackTrace();
+                callBack.onLoginResult(false);
+            }
+        });
+
     }
 }
