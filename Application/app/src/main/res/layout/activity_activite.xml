@@ -20,7 +20,7 @@
             android:fontFamily="@font/dancing_bold"
             android:gravity="center"
             android:padding="5dp"
-            android:text="Touris Mada"
+            android:text="Les activités"
             android:textColor="@color/white"
             android:textSize="50sp" />
 
