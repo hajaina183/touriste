@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        tools:context=".Acceuil">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/dancing_bold"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Conseil"
+            android:textColor="@color/white"
+            android:textSize="50sp" />
+
+        <!-- TextView 2 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10px"
+            android:text="Explorez Madagascar en toute sérénité avec nos précieux conseils de voyage ! Découvrez comment respecter la culture locale, protéger la biodiversité unique du pays, goûter à la délicieuse cuisine malgache et bien plus encore pour vivre une expérience inoubliable. Profitez de votre séjour en toute sécurité et appréciez chaque moment de votre aventure à travers cette magnifique île !"
+            android:textColor="#fff"
+            android:textSize="16sp">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="138dp"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+
+                    <ImageView
+                        android:layout_width="159dp"
+                        android:layout_height="102dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="30px"
+                        android:layout_marginBottom="20px"
+                        android:src="@drawable/conseil1" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="124dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/dm_medium"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Madagascar a une riche diversité culturelle. Soyez respectueux envers les coutumes et traditions locales. Apprenez quelques phrases en malgache pour montrer votre intérêt pour la culture du pays."
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="163dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/dm_medium"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Hydratez-vous et protégez-vous du soleil : Les régions de Madagascar peuvent être chaudes et ensoleillées. Buvez beaucoup d'eau pour rester hydraté et portez une protection solaire, un chapeau et des vêtements légers pour vous protéger du soleil."
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="138dp"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+
+                    <ImageView
+                        android:layout_width="159dp"
+                        android:layout_height="102dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="30px"
+                        android:layout_marginBottom="20px"
+                        android:src="@drawable/conseil2" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="138dp"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+
+                    <ImageView
+                        android:layout_width="159dp"
+                        android:layout_height="102dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="30px"
+                        android:layout_marginBottom="20px"
+                        android:src="@drawable/conseil3" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="124dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/dm_medium"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Goûtez la cuisine locale : La gastronomie malgache est riche en saveurs uniques. Essayez les plats locaux et explorez les marchés pour découvrir de nouvelles saveurs et spécialités régionales."
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="124dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/dm_medium"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Prenez des précautions sanitaires : Avant de voyager à Madagascar, vérifiez les recommandations de santé et de vaccination. Emportez des médicaments de base et des articles d'hygiène pour rester en bonne santé pendant votre séjour."
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

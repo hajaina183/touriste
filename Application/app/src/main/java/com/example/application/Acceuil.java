@@ -29,5 +29,13 @@ public class Acceuil extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        cardView4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Acceuil.this, Conseil.class);
+                startActivity(intent);
+            }
+        });
     }
 }
