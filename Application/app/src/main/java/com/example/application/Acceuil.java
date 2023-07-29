@@ -30,6 +30,15 @@ public class Acceuil extends AppCompatActivity {
             }
         });
 
+        cardView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Lancer la nouvelle activité lorsque le CardView est cliqué
+                Intent intent = new Intent(Acceuil.this, Activite.class);
+                startActivity(intent);
+            }
+        });
+
         cardView4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
