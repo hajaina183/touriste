@@ -18,6 +18,9 @@
             android:name=".Culture"
             android:exported="false" />
         <activity
+            android:name=".TestVariable"
+            android:exported="false" />
+        <activity
             android:name=".Conseil"
             android:exported="false" />
         <activity
