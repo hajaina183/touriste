@@ -25,7 +25,7 @@ public class Acceuil extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Lancer la nouvelle activité lorsque le CardView est cliqué
-                Intent intent = new Intent(Acceuil.this, AppleActivity.class);
+                Intent intent = new Intent(Acceuil.this, MainActivity2.class);
                 startActivity(intent);
             }
         });
