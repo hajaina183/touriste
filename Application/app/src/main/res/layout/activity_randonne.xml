@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Randonne"
+    android:background="@color/app_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        tools:context=".Randone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="247dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            tools:context=".Randone">
+
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/activite"
+                android:scaleType="centerCrop" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/dancing_bold"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Les meilleurs endroits pour la randonnée à Madagascar"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <!-- TextView 2 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10px"
+            android:text="Madagascar est un endroit idéal pour les amateurs de randonnée en raison de sa biodiversité unique et de ses paysages époustouflants. Il y a de nombreux parcs nationaux et réserves naturelles à explorer, ainsi que des montagnes, des forêts et des gorges à couper le souffle."
+            android:textColor="#fff"
+            android:textSize="16sp">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="138dp"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <VideoView
+                        android:id="@+id/videoView"
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/dancing_bold"
+                    android:padding="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Parc national d’Andringitra"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="124dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/dm_medium"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Madagascar a une riche diversité culturelle. Soyez respectueux envers les coutumes et traditions locales. Apprenez quelques phrases en malgache pour montrer votre intérêt pour la culture du pays."
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="155dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/dancing_bold"
+                    android:padding="5dp"
+                    android:text="Parc national de l’Isalo"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="163dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/dm_medium"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Le Parc national de l’Isalo se trouve dans le sud-ouest de Madagascar et est célèbre pour ses formations rocheuses uniques, ses canyons profonds et ses cascades d’eau cristalline. Les randonneurs peuvent explorer de nombreux sentiers de randonnée, y compris la randonnée jusqu’à la piscine naturelle de Namaza, un bassin d’eau claire entouré de formations rocheuses spectaculaires."
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="193dp"
+                android:layout_height="126dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="122dp"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+
+                    <ImageView
+                        android:layout_width="142dp"
+                        android:layout_height="92dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10px"
+                        android:layout_marginBottom="20px"
+                        android:src="@drawable/parc_national_isalo" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="199dp"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+
+                    <ImageView
+                        android:layout_width="159dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="5px"
+                        android:layout_marginBottom="20px"
+                        android:src="@drawable/massif_ankarana" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/dancing_bold"
+                    android:padding="5dp"
+                    android:text="Massif de l’Ankarana"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="161dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/dm_medium"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Le Massif de l’Ankarana au nord de Madagascar est célèbre pour ses formations rocheuses uniques, ses grottes souterraines et ses sentiers de randonnée. La randonnée jusqu'à la grotte de Ratsirana, avec ses formations calcaires et ses bassins d'eau claire, est une expérience populaire pour les randonneurs."
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/dancing_bold"
+                android:padding="5dp"
+                android:text="Réserve naturelle de Marojejy"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="124dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/dm_medium"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="La Réserve naturelle de Marojejy se trouve dans le nord-est de Madagascar et est connue pour ses forêts vierges luxuriantes et ses paysages montagneux spectaculaires. Les randonneurs peuvent explorer de nombreux sentiers de randonnée, y compris la randonnée jusqu’au sommet du Mont Marojejy, qui offre une vue imprenable sur les montagnes environnantes."
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="279dp"
+            android:layout_height="179dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="163dp"
+                android:layout_gravity="left"
+                android:layout_marginTop="30px"
+                android:layout_marginBottom="20px"
+                android:padding="5dp"
+                android:src="@drawable/marojejy" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>
