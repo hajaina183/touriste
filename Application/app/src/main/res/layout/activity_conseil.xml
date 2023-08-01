@@ -91,7 +91,7 @@
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="Hydratez-vous et protégez-vous du soleil : Les régions de Madagascar peuvent être chaudes et ensoleillées. Buvez beaucoup d'eau pour rester hydraté et portez une protection solaire, un chapeau et des vêtements légers pour vous protéger du soleil."
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="10sp" />
 
             <androidx.cardview.widget.CardView
@@ -179,7 +179,7 @@
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="Prenez des précautions sanitaires : Avant de voyager à Madagascar, vérifiez les recommandations de santé et de vaccination. Emportez des médicaments de base et des articles d'hygiène pour rester en bonne santé pendant votre séjour."
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="10sp" />
         </LinearLayout>
 
