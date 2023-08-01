@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Plonge"
+    android:background="@color/app_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        tools:context=".Plonge">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="247dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            tools:context=".Plonge">
+
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/plonge"
+                android:scaleType="centerCrop" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/dancing_bold"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Faire de la plongée sous-marine à MADAGASCAR"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <!-- TextView 2 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10px"
+            android:text="Située dans l’océan Indien entre l’Afrique et l’Asie, Madagascar évoque des sentiments de découverte et d’aventure de par sa biodiversité riche et endémique. On dénombre de nombreux spots parfaits pour votre prochain voyage plongée ! Les plus importants étant ceux dans la région de Nosy Be qui offrent des sites de plongée sous-marine de grande qualité. L’occasion rêvée de nager parmi les tortues, les raies pastenagues ou encore les raies mantas."
+            android:textColor="#fff"
+            android:textSize="16sp">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="283dp"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="138dp"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <VideoView
+                        android:id="@+id/videoView"
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/dancing_bold"
+                    android:padding="10dp"
+                    android:text="Une biodiversité marine exceptionnelle"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="214dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/dm_medium"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="La biodiversité marine de Madagascar est extraordinaire, avec une profusion de variétés de poissons. De nombreux centres de plongée vous offrent des rencontres avec les poissons de corail, les tortues marines et les grands cétacés. Un voyage plongée à Madagascar vous ravira ! Les débutants peuvent aussi pratiquer le snorkeling dans les eaux peu profondes de Nosy Be ou Tulear pour admirer la faune sous-marine cachée dans les rochers et les coraux colorés du bord de mer."
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="206dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="155dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="61dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/dancing_bold"
+                    android:padding="10dp"
+                    android:text="La forêt de Gorgones (13-20 M)"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="163dp"
+                    android:layout_height="136dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/dm_medium"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="La Forêt de Gorgones est un des plus beaux site de plongée de Madagascar, à faire absolument. Vous pourrez observer ce champ rempli d’immenses gorgones et d’animaux marins en tout genre dans une ambiance hors du commun."
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="193dp"
+                android:layout_height="126dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="122dp"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+
+                    <ImageView
+                        android:layout_width="142dp"
+                        android:layout_height="92dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10px"
+                        android:layout_marginBottom="20px"
+                        android:src="@drawable/plongee_sous_marine" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="199dp"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+
+                    <ImageView
+                        android:layout_width="159dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="5px"
+                        android:layout_marginBottom="20px"
+                        android:src="@drawable/plongee_sous_marine_3" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/dancing_bold"
+                    android:padding="10dp"
+                    android:text="Les Épaves (26-30 m)"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="161dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/dm_medium"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Vivez une très belle expérience de plongée sous-marine à Madagascar en visitant quatre épaves de bateaux de petite et moyenne taille recouverts de coraux et habités par des milliers de poissons : grosses loches, mérous, raies pastenagues, raies guitare, platax."
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/dancing_bold"
+                android:padding="10dp"
+                android:text="Shark Point (18-50 m)"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="124dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/dm_medium"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Au large de Nosy Be, avec une visibilité souvent meilleure que sur les autres sites de plongée, vous pourrez observer des requins de récif tels que : les requins baleines, les requins à queue noire, les requins gris, ou encore les requins marteau, etc. Une expérience unique, à ne pas manquer pour son prochain voyage plongée !"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="279dp"
+            android:layout_height="179dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="163dp"
+                android:layout_gravity="left"
+                android:layout_marginTop="30px"
+                android:layout_marginBottom="20px"
+                android:padding="5dp"
+                android:src="@drawable/plongee_sous_marine_2" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

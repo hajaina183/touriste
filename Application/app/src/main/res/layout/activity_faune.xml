@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Faune"
+    android:background="@color/app_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        tools:context=".Faune">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="247dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            tools:context=".Faune">
+
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/observation_faune_lemurien"
+                android:scaleType="centerCrop" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/dancing_bold"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Animaux de Madagascar"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <!-- TextView 2 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10px"
+            android:text="L’île de Madagascar possède une faune incroyable avec une multitude d’espèces endémiques. De plus, cette île à la végétation luxuriante permet encore de découvrir de nombreux animaux en pleine nature. C’est pourquoi, si vous partez en voyage sur « l’île rouge », observer les animaux sera sans doute sur votre liste de choses à faire. Par chance, les différentes espèces de l’île sont toutes inoffensives pour l’Homme. Mais quelles espèces d’animaux de Madagascar peut-on découvrir ? Et où et quand les voir ? Je vous explique tout dans cet article."
+            android:textColor="#fff"
+            android:textSize="16sp">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="283dp"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="138dp"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <VideoView
+                        android:id="@+id/videoView"
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/dancing_bold"
+                    android:padding="10dp"
+                    android:text="Les lémuriens"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="214dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/dm_medium"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Les lémuriens constituent une espèce de singe endémique de Madagascar. On distingue plusieurs grandes familles et plus de 100 espèces différentes. Les plus petits font la taille d’une souris (le microcèbe mignon) tandis que les plus grands peuvent atteindre près d’un mètre… Ce sont des animaux très intelligents et curieux, si bien qu’ils viennent souvent spontanément vers l’Homme. Découvrons en détail les espèces les plus courantes à Madagascar."
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="247dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="155dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/dancing_bold"
+                    android:padding="5dp"
+                    android:text="Les reptiles et papillons"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="163dp"
+                    android:layout_height="194dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/dm_medium"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Madagascar abrite 210 espèces de lézards, dont le caméléon Furcifer aux couleurs explosives et le gecko satanique-à-queue-en-feuille, maître de l'imitation des feuilles. L'île compte également 3000 espèces de papillons, dont le papillon comète mesurant jusqu'à 30 cm de long. Les randonnées en forêt offrent l'occasion de découvrir ces créatures fascinantes."
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="193dp"
+                android:layout_height="126dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="122dp"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+
+                    <ImageView
+                        android:layout_width="157dp"
+                        android:layout_height="91dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10px"
+                        android:layout_marginBottom="20px"
+                        android:src="@drawable/observation_faune_cameleon" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="263dp"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+
+                    <ImageView
+                        android:layout_width="159dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="5px"
+                        android:layout_marginBottom="20px"
+                        android:src="@drawable/observation_faune_tortue" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/dancing_bold"
+                    android:padding="10dp"
+                    android:text="Les tortues"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="214dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/dm_medium"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="À Madagascar, 16 espèces de tortues terrestres et marines sont menacées par l'exploitation forestière abusive, le braconnage pour leur viande et le commerce illégal. La tortue étoilée, emblème de l'île, est particulièrement affectée. On peut encore les observer sur les hauts plateaux et les dunes, mais c'est devenu rare. Visitez le village des tortues de Mangily, une clinique qui les protège et les relâche dans les réserves de l'île."
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="266dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="155dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/dancing_bold"
+                    android:padding="5dp"
+                    android:text="Le fossa"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="163dp"
+                    android:layout_height="214dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/dm_medium"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Le fossa, semblable à un puma, vit uniquement dans les forêts de Madagascar. Bien qu'imposant, il est inoffensif pour l'Homme. Malheureusement, sa population de 2 000 à 2 500 individus est menacée d'extinction à cause de la chasse et de la déforestation. Il est maintenant protégé et observable dans certains parcs nationaux de Madagascar : Masoala, Midongy du Sud et Ranomafana."
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="193dp"
+                android:layout_height="126dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="122dp"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+
+                    <ImageView
+                        android:layout_width="159dp"
+                        android:layout_height="90dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10px"
+                        android:layout_marginBottom="20px"
+                        android:src="@drawable/observation_faune_fosa" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/dancing_bold"
+                android:padding="10dp"
+                android:text="Dauphins, baleines et tortues de mer"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="124dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/dm_medium"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="À Madagascar, observez les baleines de juillet à novembre sur les côtes de Nosy Be et de Sainte Marie, en particulier en septembre et octobre. Les dauphins et tortues de mer sont présents toute l'année autour de Nosy Be. Profitez des excursions en bateau pour voir les dauphins tout au long de l'année et découvrir les espèces emblématiques de Madagascar, gardant ainsi de précieux souvenirs de votre voyage."
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="279dp"
+            android:layout_height="179dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="163dp"
+                android:layout_gravity="left"
+                android:layout_marginTop="30px"
+                android:layout_marginBottom="20px"
+                android:padding="5dp"
+                android:src="@drawable/observation_faune_tortue_mer" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

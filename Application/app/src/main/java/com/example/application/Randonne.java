@@ -17,6 +17,8 @@ public class Randonne extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_randonne);
 
+        getSupportActionBar().hide();
+
         VideoView videoView = findViewById(R.id.videoView);
         String videoPath = "android.resource://" +getPackageName() + "/" + R.raw.randone;
         //String videoPath = "https://video.blender.org/download/videos/3d95fb3d-c866-42c8-9db1-fe82f48ccb95-804.mp4";

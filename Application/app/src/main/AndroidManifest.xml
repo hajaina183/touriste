@@ -15,6 +15,15 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Faune"
+            android:exported="false" />
+        <activity
+            android:name=".Plonge"
+            android:exported="false" />
+        <activity
+            android:name=".Translate"
+            android:exported="false" />
+        <activity
             android:name=".Randonne"
             android:exported="false" />
         <activity

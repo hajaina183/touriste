@@ -33,6 +33,22 @@ public class Activite extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        cardView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Lancer la nouvelle activité lorsque le CardView est cliqué
+                Intent intent = new Intent(Activite.this, Plonge.class);
+                startActivity(intent);
+            }
+        });
+        cardView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Lancer la nouvelle activité lorsque le CardView est cliqué
+                Intent intent = new Intent(Activite.this, Faune.class);
+                startActivity(intent);
+            }
+        });
         /*cardView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
