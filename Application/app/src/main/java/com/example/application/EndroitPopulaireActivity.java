@@ -1,16 +1,27 @@
 package com.example.application;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.application.model.EndroitPopulaire;
 import com.example.application.model.Parc;
 import com.example.application.model.Plage;
+import com.example.application.model.Site;
 
 import java.util.List;
 
@@ -28,6 +39,16 @@ public class EndroitPopulaireActivity extends AppCompatActivity {
         setContentView(R.layout.activity_endroit_populaire);
 
 
+        String[] options = {"Parc","Plage", "Site"};
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
+                android.R.layout.simple_spinner_item, options);
+
+        Spinner spinnerSearch = findViewById(R.id.spinnerSearch);
+        spinnerSearch.setAdapter(adapter);
+
+
+
         TextView description1 = findViewById(R.id.description_1);
         ImageView image1 = findViewById(R.id.image_1);
         TextView description2 = findViewById(R.id.description_2);
@@ -42,6 +63,14 @@ public class EndroitPopulaireActivity extends AppCompatActivity {
         ImageView plageim1 = findViewById(R.id.imageplage_2) ;
         TextView plagedes2 = findViewById(R.id.plage_3);
         ImageView plageim2 = findViewById(R.id.imageplage_3) ;
+
+
+        TextView descSite1 = findViewById(R.id.descriptionsite_1);
+        ImageView siteimage1 = findViewById(R.id.siteimage1) ;
+        TextView descSite2 = findViewById(R.id.descriptionsite_2);
+        ImageView siteimage2 = findViewById(R.id.siteimage2) ;
+        TextView descSite3 = findViewById(R.id.descriptionsite_3);
+        ImageView siteimage3 = findViewById(R.id.siteimage3) ;
 
 
 
@@ -102,12 +131,6 @@ public class EndroitPopulaireActivity extends AppCompatActivity {
                     int resId2 = getResources().getIdentifier(plages.get(2).getPhoto(), "drawable", getPackageName());
                     Drawable drawable2= getResources().getDrawable(resId2);
                     plageim2.setImageDrawable(drawable2);
-
-
-
-
-
-
                 }else {
                     Log.e(TAG, "dans else");
                 }
@@ -119,11 +142,40 @@ public class EndroitPopulaireActivity extends AppCompatActivity {
             }
         });
 
+        Site s = new Site();
+        s.getData(new Callback<List<Site>>() {
+            @Override
+            public void onResponse(Call<List<Site>> call, Response<List<Site>> response) {
+                if (response.isSuccessful()) {
+                    List<Site> sites = response.body();
+                    descSite1.setText(sites.get(0).getNom());
+                    int resId = getResources().getIdentifier(sites.get(0).getPhoto(), "drawable", getPackageName());
+                    Drawable drawable = getResources().getDrawable(resId);
+                    siteimage1.setImageDrawable(drawable);
+
+                    descSite2.setText(sites.get(1).getNom());
+                    int resId2 = getResources().getIdentifier(sites.get(1).getPhoto(), "drawable", getPackageName());
+                    Drawable drawable2 = getResources().getDrawable(resId2);
+                    siteimage2.setImageDrawable(drawable2);
+
+                    descSite3.setText(sites.get(2).getNom());
+                    int resId3 = getResources().getIdentifier(sites.get(2).getPhoto(), "drawable", getPackageName());
+                    Drawable drawable3 = getResources().getDrawable(resId3);
+                    siteimage3.setImageDrawable(drawable3);
+
+                }else {
+                    Log.e(TAG, "dans else");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Site>> call, Throwable t) {
+
+            }
+        });
+
 
     }
-
-
-
 
 }
 

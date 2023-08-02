@@ -13,7 +13,26 @@
         android:padding="24dp"
         tools:context=".Acceuil">
 
-        <!-- TextView 2 -->
+
+        <Spinner
+            android:id="@+id/spinnerSearch"
+            style="@style/SpinnerStyle"
+            android:layout_width="359dp"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:spinnerMode="dropdown" />
+
+        <!-- Bouton "Rechercher" en bas -->
+        <Button
+            android:id="@+id/buttonSearch"
+            android:layout_width="359dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinnerSearch"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="@color/button_color"
+            android:text="Rechercher"
+            android:textColor="@color/black"/>
+
         <TextView
             android:layout_width="355dp"
             android:layout_height="wrap_content"
@@ -63,8 +82,6 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
-
-                <!-- Deuxième paire image-description -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -91,8 +108,6 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
-
-                <!-- Troisième paire image-description -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -119,17 +134,7 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
-
-
-                <!-- Ajouter plus de paires image-description pour plus d'images -->
-
             </LinearLayout>
-
-
-
-
-
-
         </HorizontalScrollView>
 
         <TextView
@@ -151,8 +156,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
-
-                <!-- Première paire image-description -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -180,8 +183,6 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
-
-                <!-- Deuxième paire image-description -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -208,8 +209,6 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
-
-                <!-- Troisième paire image-description -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -236,25 +235,109 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
-
-
-                <!-- Ajouter plus de paires image-description pour plus d'images -->
-
             </LinearLayout>
-
-
-
-
-
-
         </HorizontalScrollView>
+        <TextView
+            android:layout_width="355dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/dancing_bold"
+            android:gravity="left"
+            android:padding="5dp"
+            android:text="Site"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
 
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="8dp">
 
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
 
+                        <ImageView
+                            android:id="@+id/siteimage1"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            />
 
+                        <TextView
+                            android:id="@+id/descriptionsite_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textColor="#000000" />
+                    </LinearLayout>
 
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="8dp">
 
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/siteimage2"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp" />
+
+                        <TextView
+                            android:id="@+id/descriptionsite_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textColor="#000000" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/siteimage3"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp" />
+
+                        <TextView
+                            android:id="@+id/descriptionsite_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textColor="#000000" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </HorizontalScrollView>
 
 
     </LinearLayout>
