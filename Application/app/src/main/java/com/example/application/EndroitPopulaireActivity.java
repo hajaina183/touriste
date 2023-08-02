@@ -38,6 +38,7 @@ public class EndroitPopulaireActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_endroit_populaire);
 
+        getSupportActionBar().hide();
 
         String[] options = {"Parc","Plage", "Site"};
 

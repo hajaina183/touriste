@@ -49,6 +49,20 @@ public class Activite extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        cardView4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Lancer la nouvelle activité lorsque le CardView est cliqué
+                Intent intent = new Intent(Activite.this, Baleine.class);
+                startActivity(intent);
+            }
+        });
+        // Ajouter le FooterFragment dans le conteneur
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.footerFragment, new FooterFragment())
+                    .commit();
+        }
         /*cardView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
