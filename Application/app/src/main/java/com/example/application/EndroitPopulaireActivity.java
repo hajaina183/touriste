@@ -40,6 +40,13 @@ public class EndroitPopulaireActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
+        // Ajouter le FooterFragment dans le conteneur
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.footerFragment, new FooterFragment())
+                    .commit();
+        }
+
         String[] options = {"Parc","Plage", "Site"};
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
