@@ -4,13 +4,18 @@ import android.util.Log;
 
 import com.example.application.RetrofitClient;
 import com.example.application.controler.ParcController;
+import com.example.application.controler.ProfilControler;
 
+import java.util.Date;
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
+import retrofit2.Response;
 
 public class Parc {
+
+
     String id ;
     String nom;
 
@@ -75,6 +80,37 @@ public class Parc {
         Call<List<Parc>> call = methods.getAllParc();
         // Effectuer l'appel asynchrone
         call.enqueue(callback);
+    }
+
+    public interface InsertCommentaire {
+        void onLoginResult(boolean isSuccess);
+    }
+
+    public  void insertCommentaireParc (String nom , Date date, String text, String user,final Parc.InsertCommentaire callBack){
+        ParcController parcController = RetrofitClient.getRetrofitInstance().create(ParcController.class);
+        Call<Profil> call = parcController.insertCommentaireParc(nom, date, text, user);
+        call.enqueue(new Callback<Profil>() {
+            @Override
+            public void onResponse(Call<Profil> call, Response<Profil> response) {
+                if (response.isSuccessful()) {
+                    if(response.body().getNom() != null && !response.body().getNom().isEmpty()) {
+
+                        callBack.onLoginResult(true);
+                    } else {
+                        callBack.onLoginResult(false);
+                    }
+                } else {
+
+                    callBack.onLoginResult(false);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Profil> call, Throwable t) {
+                t.printStackTrace();
+                callBack.onLoginResult(false);
+            }
+        });
     }
 
 }

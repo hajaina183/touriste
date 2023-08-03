@@ -6,6 +6,7 @@ import com.example.application.RetrofitClient;
 import com.example.application.controler.ProfilControler;
 
 import java.io.IOException;
+import java.util.Date;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -97,6 +98,8 @@ public class Profil {
     }
 
 
+
+
     public void traitementLogin(String user, String mdp, final LoginCallback callback) {
         ProfilControler profilControler = RetrofitClient.getRetrofitInstance().create(ProfilControler.class);
         Call<Profil> call = profilControler.traitementLogin(user, mdp);
@@ -146,7 +149,7 @@ public class Profil {
         }
     }
 
-    public void inscription(String nom, String prenom , String adresse , String user , String password,final InscriptionCallBack callBack ){
+        public void inscription(String nom, String prenom , String adresse , String user , String password,final InscriptionCallBack callBack ){
         ProfilControler profilControler = RetrofitClient.getRetrofitInstance().create(ProfilControler.class);
         Call<Profil> call = profilControler.inscription(nom,prenom,adresse,user,password);
         call.enqueue(new Callback<Profil>() {
@@ -173,4 +176,6 @@ public class Profil {
         });
 
     }
+
+
 }

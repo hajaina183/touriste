@@ -3,9 +3,11 @@ package com.example.application;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
@@ -44,6 +46,16 @@ public class EndroitPopulaireActivity extends AppCompatActivity {
         setContentView(R.layout.activity_endroit_populaire);
 
         getSupportActionBar().hide();
+
+        CardView cardView1 = findViewById(R.id.parc1);
+        cardView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(EndroitPopulaireActivity.this, DetailParc1.class);
+                startActivity(intent);
+            }
+        });
 
         // Ajouter le FooterFragment dans le conteneur
         if (savedInstanceState == null) {
