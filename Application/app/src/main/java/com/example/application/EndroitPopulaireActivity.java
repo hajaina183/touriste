@@ -11,8 +11,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -32,6 +35,8 @@ import retrofit2.Response;
 public class EndroitPopulaireActivity extends AppCompatActivity {
 
     private static final String TAG = "EndroitPopulaireActivity";
+
+    private String selectedOption = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +59,59 @@ public class EndroitPopulaireActivity extends AppCompatActivity {
 
         Spinner spinnerSearch = findViewById(R.id.spinnerSearch);
         spinnerSearch.setAdapter(adapter);
+        spinnerSearch.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                selectedOption = options[position]; // Met à jour la variable selectedOption lorsque l'utilisateur sélectionne une option
+            }
 
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // Action à réaliser lorsque rien n'est sélectionné
+            }
+        });
+        Button buttonSearch = findViewById(R.id.buttonSearch);
+        buttonSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Action à réaliser lorsque l'utilisateur clique sur le bouton "Rechercher"
+                if (!selectedOption.isEmpty()) {
+                    Toast.makeText(EndroitPopulaireActivity.this, "Option sélectionnée : " + selectedOption, Toast.LENGTH_SHORT).show();
+                    if (selectedOption.equals("Parc")) {
+                        findViewById(R.id.textparc).setVisibility(View.VISIBLE);
+                        findViewById(R.id.layoutparc).setVisibility(View.VISIBLE);
+
+                        findViewById(R.id.textplage).setVisibility(View.GONE);
+                        findViewById(R.id.layoutplage).setVisibility(View.GONE);
+                        findViewById(R.id.textsite).setVisibility(View.GONE);
+                        findViewById(R.id.layoutsite).setVisibility(View.GONE);
+
+                    }
+                    if (selectedOption.equals("Plage")) {
+                        findViewById(R.id.textplage).setVisibility(View.VISIBLE);
+                        findViewById(R.id.layoutplage).setVisibility(View.VISIBLE);
+
+                        findViewById(R.id.textparc).setVisibility(View.GONE);
+                        findViewById(R.id.layoutparc).setVisibility(View.GONE);
+                        findViewById(R.id.textsite).setVisibility(View.GONE);
+                        findViewById(R.id.layoutsite).setVisibility(View.GONE);
+
+                    }if (selectedOption.equals("Site")) {
+                        findViewById(R.id.textsite).setVisibility(View.VISIBLE);
+                        findViewById(R.id.layoutsite).setVisibility(View.VISIBLE);
+
+                        findViewById(R.id.textplage).setVisibility(View.GONE);
+                        findViewById(R.id.layoutplage).setVisibility(View.GONE);
+                        findViewById(R.id.textparc).setVisibility(View.GONE);
+                        findViewById(R.id.layoutparc).setVisibility(View.GONE);
+
+
+                    }
+                } else {
+                    Toast.makeText(EndroitPopulaireActivity.this, "Veuillez sélectionner une option dans le Spinner.", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
 
         TextView description1 = findViewById(R.id.description_1);
