@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "68714615945",
+    "project_id": "touriste-a3616",
+    "storage_bucket": "touriste-a3616.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68714615945:android:87a919c4229c57d3322258",
+        "android_client_info": {
+          "package_name": "com.example.applicatio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "68714615945-07kca9pb8di3ngtph7nvpsoclv0sltbu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBt6bYLcllS94Itn9F3UJ55hPIs44yj3qI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "68714615945-07kca9pb8di3ngtph7nvpsoclv0sltbu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68714615945:android:75ba486fa4ca55d1322258",
+        "android_client_info": {
+          "package_name": "com.example.application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "68714615945-07kca9pb8di3ngtph7nvpsoclv0sltbu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBt6bYLcllS94Itn9F3UJ55hPIs44yj3qI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "68714615945-07kca9pb8di3ngtph7nvpsoclv0sltbu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

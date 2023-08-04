@@ -1,13 +1,16 @@
 package com.example.application.model;
 
 import com.example.application.RetrofitClient;
+import com.example.application.controler.ParcController;
 import com.example.application.controler.PlageController;
 import com.example.application.controler.SiteController;
 
+import java.util.Date;
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
+import retrofit2.Response;
 
 public class Site {
 
@@ -73,5 +76,37 @@ public class Site {
         Call<List<Site>> call = methods.getAllSite();
         // Effectuer l'appel asynchrone
         call.enqueue(callback);
+    }
+
+    public interface InsertCommentaire {
+        void onLoginResult(boolean isSuccess);
+    }
+
+
+    public  void insertCommentaireSite (String nom , Date date, String text, String user, final Site.InsertCommentaire callBack){
+        SiteController parcController = RetrofitClient.getRetrofitInstance().create(SiteController.class);
+        Call<Profil> call = parcController.insertCommentaireSite(nom, date, text, user);
+        call.enqueue(new Callback<Profil>() {
+            @Override
+            public void onResponse(Call<Profil> call, Response<Profil> response) {
+                if (response.isSuccessful()) {
+                    if(response.body().getNom() != null && !response.body().getNom().isEmpty()) {
+
+                        callBack.onLoginResult(true);
+                    } else {
+                        callBack.onLoginResult(false);
+                    }
+                } else {
+
+                    callBack.onLoginResult(false);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Profil> call, Throwable t) {
+                t.printStackTrace();
+                callBack.onLoginResult(false);
+            }
+        });
     }
 }

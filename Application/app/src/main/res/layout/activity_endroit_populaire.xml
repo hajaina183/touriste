@@ -94,6 +94,7 @@
 
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/parc2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
@@ -120,6 +121,7 @@
 
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/parc3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
@@ -170,6 +172,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/plage1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
@@ -197,6 +200,7 @@
 
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/plage2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
@@ -223,6 +227,7 @@
 
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/plage3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
@@ -273,6 +278,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/site1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
@@ -300,6 +306,7 @@
 
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/site2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
@@ -326,6 +333,7 @@
 
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/site3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"

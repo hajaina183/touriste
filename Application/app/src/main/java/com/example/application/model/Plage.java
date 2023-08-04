@@ -1,12 +1,15 @@
 package com.example.application.model;
 
 import com.example.application.RetrofitClient;
+import com.example.application.controler.ParcController;
 import com.example.application.controler.PlageController;
 
+import java.util.Date;
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
+import retrofit2.Response;
 
 public class Plage {
 
@@ -72,5 +75,32 @@ public class Plage {
         Call<List<Plage>> call = methods.getAllPlages();
         // Effectuer l'appel asynchrone
         call.enqueue(callback);
+    }
+
+    public  void insertCommentairePlage (String nom , Date date, String text, String user, final Parc.InsertCommentaire callBack){
+        PlageController parcController = RetrofitClient.getRetrofitInstance().create(PlageController.class);
+        Call<Profil> call = parcController.insertCommentairePlage(nom, date, text, user);
+        call.enqueue(new Callback<Profil>() {
+            @Override
+            public void onResponse(Call<Profil> call, Response<Profil> response) {
+                if (response.isSuccessful()) {
+                    if(response.body().getNom() != null && !response.body().getNom().isEmpty()) {
+
+                        callBack.onLoginResult(true);
+                    } else {
+                        callBack.onLoginResult(false);
+                    }
+                } else {
+
+                    callBack.onLoginResult(false);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Profil> call, Throwable t) {
+                t.printStackTrace();
+                callBack.onLoginResult(false);
+            }
+        });
     }
 }

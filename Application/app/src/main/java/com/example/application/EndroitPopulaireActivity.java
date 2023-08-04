@@ -50,6 +50,14 @@ public class EndroitPopulaireActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         CardView cardView1 = findViewById(R.id.parc1);
+        CardView cardView2 = findViewById(R.id.parc2);
+        CardView cardView3 = findViewById(R.id.parc3);
+        CardView cardView4 = findViewById(R.id.plage1);
+        CardView cardView5 = findViewById(R.id.plage2);
+        CardView cardView6 = findViewById(R.id.plage3);
+        CardView cardView7 = findViewById(R.id.site1);
+        CardView cardView8 = findViewById(R.id.site2);
+        CardView cardView9 = findViewById(R.id.site3);
         cardView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,6 +66,71 @@ public class EndroitPopulaireActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        cardView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(EndroitPopulaireActivity.this, DetailParc2.class);
+                startActivity(intent);
+            }
+        });
+
+        cardView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(EndroitPopulaireActivity.this, DetailParc3.class);
+                startActivity(intent);
+            }
+        });
+
+        cardView4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(EndroitPopulaireActivity.this, DetailPlage1.class);
+                startActivity(intent);
+            }
+        });
+
+        cardView5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(EndroitPopulaireActivity.this, DetailPlage2.class);
+                startActivity(intent);
+            }
+        });
+
+        cardView6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(EndroitPopulaireActivity.this, DetailPlage3.class);
+                startActivity(intent);
+            }
+        });
+
+        cardView7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(EndroitPopulaireActivity.this, DetailSite1.class);
+                startActivity(intent);
+            }
+        });
+
+        cardView8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(EndroitPopulaireActivity.this, DetailSite2.class);
+                startActivity(intent);
+            }
+        });
+
+        cardView9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(EndroitPopulaireActivity.this, DetailSite3.class);
+                startActivity(intent);
+            }
+        });
+
 
         // Ajouter le FooterFragment dans le conteneur
         if (savedInstanceState == null) {

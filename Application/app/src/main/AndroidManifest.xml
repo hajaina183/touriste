@@ -18,6 +18,30 @@
             android:name=".ParametreActivity"
             android:exported="false" />
         <activity
+            android:name=".DetailSite3"
+            android:exported="false" />
+        <activity
+            android:name=".DetailSite2"
+            android:exported="false" />
+        <activity
+            android:name=".DetailSite1"
+            android:exported="false" />
+        <activity
+            android:name=".DetailPlage3"
+            android:exported="false" />
+        <activity
+            android:name=".DetailPlage2"
+            android:exported="false" />
+        <activity
+            android:name=".DetailPlage1"
+            android:exported="false" />
+        <activity
+            android:name=".DetailParc3"
+            android:exported="false" />
+        <activity
+            android:name=".DetailParc2"
+            android:exported="false" />
+        <activity
             android:name=".DetailParc1"
             android:exported="false" />
         <activity
