@@ -2,7 +2,9 @@ package com.example.application;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 
 public class Culture extends AppCompatActivity {
 

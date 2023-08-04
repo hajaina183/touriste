@@ -81,6 +81,7 @@
                 android:layout_marginRight="10dp"
                 android:drawableStart="@drawable/baseline_person_24"
                 android:drawablePadding="5dp"
+                android:textColor="@color/black"
                 android:drawableTint="@color/app_color"
                 android:inputType="text">
 
@@ -110,6 +111,7 @@
                 android:layout_marginRight="10dp"
                 android:drawableStart="@drawable/baseline_lock_24"
                 android:drawablePadding="5dp"
+                android:textColor="@color/black"
                 android:drawableTint="@color/app_color"
                 android:inputType="textPassword">
 

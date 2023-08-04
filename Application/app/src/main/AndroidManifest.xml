@@ -15,6 +15,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".ParametreActivity"
+            android:exported="false" />
+        <activity
             android:name=".DetailParc1"
             android:exported="false" />
         <activity
@@ -28,9 +31,6 @@
             android:exported="false" />
         <activity
             android:name=".Plonge"
-            android:exported="false" />
-        <activity
-            android:name=".Translate"
             android:exported="false" />
         <activity
             android:name=".Randonne"
@@ -75,7 +75,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

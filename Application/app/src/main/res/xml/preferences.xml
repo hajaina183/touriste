@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Paramètres généraux">
+
+        <!-- Vous pouvez ajouter ici d'autres préférences -->
+        <CheckBoxPreference
+            android:key="notif_pref"
+            android:title="Activer les notifications"
+            android:summary="Activez cette option pour recevoir des notifications" />
+
+        <ListPreference
+            android:key="theme_pref"
+            android:title="Thème"
+            android:summary="Sélectionnez le thème de l'application"
+            android:entries="@array/theme_entries"
+            android:entryValues="@array/theme_values" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

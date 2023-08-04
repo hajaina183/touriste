@@ -1,12 +1,17 @@
 package com.example.application;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -58,7 +63,26 @@ public class FooterFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_footer, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_footer, container, false);
+        CardView cardViewProfil = rootView.findViewById(R.id.btnProfile);
+        cardViewProfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), ParametreActivity.class);
+                startActivity(intent);
+                Toast.makeText(getActivity(), "CardView profil cliqué !", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        CardView cardViewSearch = rootView.findViewById(R.id.btnSearch);
+        cardViewSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "CardView search cliqué !", Toast.LENGTH_SHORT).show();
+            }
+        });
+        return rootView;
     }
+
+
 }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="LightTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Ajoutez ici les attributs spécifiques pour le thème clair -->
+        <item name="android:windowBackground">@color/app_color</item>
+    </style>
+
+    <style name="DarkTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Ajoutez ici les attributs spécifiques pour le thème sombre -->
+        <item name="android:windowBackground">@color/black</item>
+    </style>
+</resources>
