@@ -59,5 +59,12 @@ public class Acceuil extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // Ajouter le FooterFragment dans le conteneur
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.footerFragment, new FooterFragment())
+                    .commit();
+        }
     }
 }

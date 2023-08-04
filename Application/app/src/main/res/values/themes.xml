@@ -25,11 +25,15 @@
 
     <!-- Light mode -->
     <style name="SCREEN">
-        <item name="android:background">#FFF</item>
+        <item name="android:background">@color/app_color</item>
     </style>
 
     <style name="TEXT">
-        <item name="android:textColor">#000</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="CARD">
+        <item name="cardBackgroundColor">#FFFFFF</item>
     </style>
 
     <style name="BUTTON">
