@@ -30,5 +30,12 @@ public class Baleine extends AppCompatActivity {
         MediaController mediaController = new MediaController(this);
         videoView.setMediaController(mediaController);
         mediaController.setAnchorView(videoView);
+
+        // Ajouter le FooterFragment dans le conteneur
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.footerFragment, new FooterFragment())
+                    .commit();
+        }
     }
 }

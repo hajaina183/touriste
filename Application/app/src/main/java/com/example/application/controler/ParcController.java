@@ -1,5 +1,6 @@
 package com.example.application.controler;
 
+import com.example.application.model.Commentaire;
 import com.example.application.model.EndroitPopulaire;
 import com.example.application.model.Parc;
 import com.example.application.model.Profil;
@@ -23,5 +24,8 @@ public interface ParcController {
     @PUT("parc/insertCommentaireParc")
     Call<Profil> insertCommentaireParc(@Field("nom") String nom, @Field("date") Date date, @Field("text") String text,@Field("user") String user );
 
+    @FormUrlEncoded
+    @POST("parc/listeCommentaire")
+    Call<List<Commentaire>> getAllCommentaire(@Field("nom") String nom);
 
 }

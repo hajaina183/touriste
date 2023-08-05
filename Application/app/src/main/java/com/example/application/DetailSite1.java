@@ -36,6 +36,7 @@ public class DetailSite1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_site1);
 
+        getSupportActionBar().hide();
 
         ImageView imageViewSend = findViewById(R.id.imageViewSend);
 

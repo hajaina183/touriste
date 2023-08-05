@@ -33,6 +33,8 @@ public class DetailParc3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_parc3);
 
+        getSupportActionBar().hide();
+
         //ImageView imageViewSend = findViewById(R.id.imageViewSend);
         ImageView imageViewSend = findViewById(R.id.imageViewSend);
 

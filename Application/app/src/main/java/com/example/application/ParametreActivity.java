@@ -28,6 +28,8 @@ public class ParametreActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parametre);
 
+        getSupportActionBar().hide();
+
         ListView listView = findViewById(R.id.listview);
 
         List<String> list = new ArrayList<>();

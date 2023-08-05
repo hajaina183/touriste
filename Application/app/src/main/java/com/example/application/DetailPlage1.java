@@ -36,6 +36,8 @@ public class DetailPlage1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_plage1);
 
+        getSupportActionBar().hide();
+
         ImageView imageViewSend = findViewById(R.id.imageViewSend);
 
         TextView titre = findViewById(R.id.titre);

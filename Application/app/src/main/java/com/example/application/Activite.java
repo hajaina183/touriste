@@ -65,19 +65,5 @@ public class Activite extends AppCompatActivity {
                     .add(R.id.footerFragment, new FooterFragment())
                     .commit();
         }
-        /*cardView1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Remplacez "VotreNouveauFragment" par le nom de la classe de votre nouveau fragment à ouvrir
-                Fragment nouveauFragment = new Randone();
-
-                // Utilisez FragmentManager pour ouvrir le nouveau fragment
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.mainContainer, nouveauFragment);
-                fragmentTransaction.addToBackStack(null); // Si vous souhaitez ajouter cette transition à la pile de fragments
-                fragmentTransaction.commit();
-            }
-        });*/
     }
 }

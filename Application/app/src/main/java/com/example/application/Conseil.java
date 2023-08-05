@@ -12,5 +12,14 @@ public class Conseil extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_conseil);
+
+        getSupportActionBar().hide();
+
+        // Ajouter le FooterFragment dans le conteneur
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.footerFragment, new FooterFragment())
+                    .commit();
+        }
     }
 }

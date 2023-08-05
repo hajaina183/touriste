@@ -1,7 +1,11 @@
 package com.example.application;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,16 +14,28 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.example.application.model.Commentaire;
 import com.example.application.model.Parc;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
@@ -31,10 +47,18 @@ import retrofit2.Response;
 public class DetailParc1 extends AppCompatActivity {
     private static final String TAG = "DetailParc1";
     private  String nomParc = "";
+
+    private ListView listView;
+    private ArrayAdapter<String> adapter;
+
+    private RecyclerView recyclerViewCommentaires;
+    private List<Commentaire> commentairesList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_parc1);
+
+        getSupportActionBar().hide();
 
         ImageView imageViewSend = findViewById(R.id.imageViewSend);
 
@@ -61,7 +85,6 @@ public class DetailParc1 extends AppCompatActivity {
                     Drawable drawable = getResources().getDrawable(resId);
                     image1.setImageDrawable(drawable);
 
-
                 } else {
                     Log.e(TAG, "dans else");
                 }
@@ -70,6 +93,46 @@ public class DetailParc1 extends AppCompatActivity {
             @Override
             public void onFailure(Call<List<Parc>> call, Throwable t) {
 
+            }
+        });
+        Log.e(TAG, "onCreate: nomParc : Croc Farm");
+        // Configurer la RecyclerView
+
+        Commentaire com = new Commentaire();
+        com.getCommentaires("Croc Farm", new Callback<List<Commentaire>>() {
+            @Override
+            public void onResponse(Call<List<Commentaire>> call, Response<List<Commentaire>> response) {
+                if (response.isSuccessful()) {
+                    Log.e(TAG, "taille commentaire ooooo ???????????? " + response.body().size());
+                    List<Commentaire> commentaires = response.body();
+                    for (int i = 0; i < commentaires.size(); i++) {
+                        Commentaire commentaire = new Commentaire();
+
+                        // Récupération des informations du commentaire
+                        commentaire.setDate(commentaires.get(i).getDate());
+                        commentaire.setText(commentaires.get(i).getText());
+                        commentaire.setUser(commentaires.get(i).getUser());
+
+                        // Affichage du contenu dans la console (Logcat)
+                        Log.d("Commentaire", "Date: " + commentaire.getDate());
+                        Log.d("Commentaire", "Texte: " + commentaire.getText());
+                        Log.d("Commentaire", "Utilisateur: " + commentaire.getUser());
+                    }
+                    //commentaireAdapter.setCommentairesList(commentaires);
+                    recyclerViewCommentaires = findViewById(R.id.recyclerViewCommentaires);
+                    recyclerViewCommentaires.setLayoutManager(new LinearLayoutManager(DetailParc1.this));
+
+                    // Créer et configurer l'adapter personnalisé pour la RecyclerView
+                    CommentaireAdapter  commentaireAdapter = new CommentaireAdapter(commentaires);
+                    recyclerViewCommentaires.setAdapter(commentaireAdapter);
+
+                } else {
+                    Log.e(TAG, "dans else commentaire");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Commentaire>> call, Throwable t) {
 
             }
         });
@@ -102,6 +165,7 @@ public class DetailParc1 extends AppCompatActivity {
                             }
                         }
                     });
+                    recreate();
                 } else {
                     // Afficher un toast ou une boîte de dialogue pour informer l'utilisateur que le commentaire est vide
                     Toast.makeText(DetailParc1.this, "Veuillez saisir un commentaire.", Toast.LENGTH_SHORT).show();
@@ -119,4 +183,53 @@ public class DetailParc1 extends AppCompatActivity {
             return null;
         }
     }
+
+    // Classe Adapter personnalisée pour la RecyclerView
+    private class CommentaireAdapter extends RecyclerView.Adapter<CommentaireAdapter.CommentaireViewHolder> {
+
+        private List<Commentaire> commentairesList;
+
+        CommentaireAdapter(List<Commentaire> commentairesList) {
+            this.commentairesList = commentairesList;
+        }
+
+        public void setCommentairesList(List<Commentaire> commentairesList) {
+            this.commentairesList = commentairesList;
+            notifyDataSetChanged(); // Notifier la RecyclerView du changement de données
+        }
+
+        @NonNull
+        @Override
+        public CommentaireViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_commentaire, parent, false);
+            return new CommentaireViewHolder(view);
+        }
+
+        @Override
+        public void onBindViewHolder(@NonNull CommentaireViewHolder holder, int position) {
+            Commentaire commentaire = commentairesList.get(position);
+            holder.textViewUser.setText(commentaire.getUser());
+            holder.textViewDate.setText(commentaire.getDate());
+            holder.textViewText.setText(commentaire.getText());
+        }
+
+        @Override
+        public int getItemCount() {
+            return commentairesList.size();
+        }
+
+        // Classe ViewHolder pour les éléments de la RecyclerView
+        class CommentaireViewHolder extends RecyclerView.ViewHolder {
+
+            TextView textViewUser, textViewDate, textViewText;
+
+            CommentaireViewHolder(View itemView) {
+                super(itemView);
+                textViewUser = itemView.findViewById(R.id.textViewUser);
+                textViewDate = itemView.findViewById(R.id.textViewDate);
+                textViewText = itemView.findViewById(R.id.textViewText);
+            }
+        }
+    }
+
 }

@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/app_color">
+    style="@style/SCREEN">
 
     <androidx.core.widget.NestedScrollView
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/app_color"
+        style="@style/SCREEN"
         android:fillViewport="true"
         android:layout_above="@id/footerFragment">
 
@@ -44,6 +44,7 @@
             </TextView>
 
             <androidx.cardview.widget.CardView
+                style="@style/CARD"
                 android:id="@+id/randonnee"
                 android:layout_marginTop="16dp"
                 android:layout_width="match_parent"
@@ -77,6 +78,7 @@
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
+                style="@style/CARD"
                 android:id="@+id/plonge"
                 android:layout_marginTop="16dp"
                 android:layout_width="match_parent"
@@ -110,6 +112,7 @@
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
+                style="@style/CARD"
                 android:id="@+id/faune"
                 android:layout_marginTop="16dp"
                 android:layout_width="match_parent"
@@ -143,6 +146,7 @@
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
+                style="@style/CARD"
                 android:id="@+id/baleine"
                 android:layout_marginTop="16dp"
                 android:layout_width="match_parent"

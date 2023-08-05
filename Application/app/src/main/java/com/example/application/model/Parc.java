@@ -1,5 +1,7 @@
 package com.example.application.model;
 
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+
 import android.util.Log;
 
 import com.example.application.RetrofitClient;
@@ -25,6 +27,16 @@ public class Parc {
     String photo ;
     String lieu ;
     String description ;
+
+    List<Commentaire> commentaire;
+
+    public List<Commentaire> getCommentaire() {
+        return commentaire;
+    }
+
+    public void setCommentaire(List<Commentaire> commentaire) {
+        this.commentaire = commentaire;
+    }
 
     public String getId() {
         return id;
@@ -111,6 +123,10 @@ public class Parc {
                 callBack.onLoginResult(false);
             }
         });
+    }
+
+    public interface GetCommentaire {
+        void onLoginResult(boolean isSuccess);
     }
 
 }

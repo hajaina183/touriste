@@ -26,6 +26,8 @@ public class Inscription extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inscription);
 
+        getSupportActionBar().hide();
+
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O ){
             CharSequence name = "My Channel";
             String description = "My Channel Description";

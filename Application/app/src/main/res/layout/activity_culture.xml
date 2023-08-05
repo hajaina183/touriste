@@ -1,201 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/app_color">
+    style="@style/SCREEN">
 
-    <LinearLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="24dp"
-        tools:context=".Culture">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/dancing_bold"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="Culture"
-            android:textColor="@color/white"
-            android:textSize="50sp" />
-
-        <!-- TextView 2 -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10px"
-            android:text="Madagascar est fascinante par sa biodiversité mais aussi par sa culture métissée aux origines à la fois asiatique et africaine. « La grande île » ne manquera pas de vous ébahir, son peuple chaleureux et bienveillant vous accueillera afin de vous faire découvrir son île au travers de ses traditions, ses savoir-faire et sa culture."
-            android:textColor="#fff"
-            android:textSize="16sp">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:fontFamily="@font/dancing_bold"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="L’artisanat sous toutes ses formes"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"/>
+        android:layout_height="match_parent"
+        style="@style/SCREEN"
+        android:fillViewport="true"
+        android:layout_above="@id/footerFragment">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="244dp"
-            android:orientation="horizontal">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="190dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                app:cardCornerRadius="8dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="138dp"
-                    android:orientation="vertical"
-                    android:padding="14dp">
-
-
-                    <ImageView
-                        android:layout_width="159dp"
-                        android:layout_height="102dp"
-                        android:layout_gravity="left"
-                        android:layout_marginTop="30px"
-                        android:layout_marginBottom="20px"
-                        android:src="@drawable/artisanat" />
-
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            tools:context=".Culture">
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="218dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:fontFamily="@font/dm_medium"
+                android:fontFamily="@font/dancing_bold"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="l'artisanat à Madagascar est une activité essentiellement rurale mais gagne en popularité dans les zones urbaines. Traditionnellement utilitaires, les objets artisanaux sont devenus plus décoratifs. La broderie, la production de soie, l'artisanat du bois, la ferblanterie, la vannerie, la bijouterie et la production de papier Antemoro sont quelques-uns des trésors culturels que l'île offre aux visiteurs."
+                android:text="Culture"
                 android:textColor="@color/white"
-                android:textSize="10sp" />
-        </LinearLayout>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:fontFamily="@font/dancing_bold"
-            android:gravity="center"
-            android:padding="5dp"
-            android:layout_marginTop="20px"
-            android:text="Le riz et le zébu, symboles de la culture malgache"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"/>
+                android:textSize="50sp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            <!-- TextView 2 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10px"
+                android:text="Madagascar est fascinante par sa biodiversité mais aussi par sa culture métissée aux origines à la fois asiatique et africaine. « La grande île » ne manquera pas de vous ébahir, son peuple chaleureux et bienveillant vous accueillera afin de vous faire découvrir son île au travers de ses traditions, ses savoir-faire et sa culture."
+                android:textColor="#fff"
+                android:textSize="16sp">
+
+            </TextView>
 
             <TextView
-                android:layout_width="163dp"
-                android:layout_height="90dp"
-                android:layout_gravity="center"
-                android:fontFamily="@font/dm_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:fontFamily="@font/dancing_bold"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="Impossible d’évoquer Madagascar sans parler du riz. Le pays vit au rythme des deux saisons du riz (récolte en décembre/janvier et en avril). Les paysages qui sont souvent agrémentés d’un véritable patchwork de petites rizières changent aussi considérablement au fil des saisons. Le zébu quant à lui est omniprésent dans le décor malgache. Le zébu est le symbole de toutes les valeurs. La couleur de sa robe exprime les circonstances joyeuses ou douloureuses de la vie. Les bucranes (crâne et cornes) ornent les tombes. La corrida Betsileo ou « Savika » qui consiste à s’accrocher le plus longtemps possible à la bosse de ces superbes animaux, n’a pour but que de rendre hommage à leur force. Il faut assister à ces représentations, notamment à Fianarantsoa ou dans les villages environnants, quand musique et costumes traditionnels se joignent à la fête. Les zébus sont régulièrement associés aux travaux des champs. Vous verrez de petits troupeaux, harangués par de jeunes gardiens, qui piétinent les sols afin de les préparer au repiquage du riz."
+                android:text="L’artisanat sous toutes ses formes"
                 android:textColor="@color/white"
-                android:textSize="10sp" />
-
-            <androidx.cardview.widget.CardView
-
-                android:layout_width="190dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                app:cardCornerRadius="8dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="130dp"
-                    android:orientation="vertical"
-                    android:padding="14dp">
-
-
-                    <ImageView
-                        android:layout_width="159dp"
-                        android:layout_height="102dp"
-                        android:layout_gravity="left"
-                        android:layout_marginTop="30px"
-                        android:layout_marginBottom="20px"
-                        android:src="@drawable/zebu" />
-
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:fontFamily="@font/dancing_bold"
-            android:gravity="center"
-            android:padding="5dp"
-            android:layout_marginTop="20px"
-            android:text="Tradition et gastronomie"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="566dp"
-            android:orientation="horizontal">
+                android:textSize="20sp"
+                android:textStyle="bold"/>
 
             <LinearLayout
-                android:layout_width="170dp"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_width="match_parent"
+                android:layout_height="244dp"
+                android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="170dp"
+                    style="@style/CARD"
+                    android:layout_width="190dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
                     android:layout_marginTop="16dp"
                     app:cardCornerRadius="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="130dp"
-                        android:orientation="horizontal"
+                        android:layout_height="138dp"
+                        android:orientation="vertical"
                         android:padding="14dp">
 
 
                         <ImageView
                             android:layout_width="159dp"
                             android:layout_height="102dp"
-                            android:layout_gravity="center"
+                            android:layout_gravity="left"
                             android:layout_marginTop="30px"
                             android:layout_marginBottom="20px"
-                            android:src="@drawable/danse" />
+                            android:src="@drawable/artisanat" />
 
 
                     </LinearLayout>
@@ -204,87 +88,218 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_marginTop="20px"
-                    android:fontFamily="@font/dancing_bold"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="Traditions et cultures"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="323dp"
+                    android:layout_height="218dp"
                     android:layout_gravity="center"
                     android:fontFamily="@font/dm_medium"
                     android:gravity="center"
                     android:padding="5dp"
-                    android:text="De très nombreuses manifestations culturelles ponctuent la vie des différentes ethnies qui peuplent la grande île. Si certaines sont annuelles, plusieurs reviennent selon un cycle plus ou moins long. Le Fanompoambe (bain des reliques royales sakalava) à Mahajanga en juin/juillet. Le Sambatra (circoncision collective Antambahoaka en région Mananjary qui a lieu tous les 7 ans). Dans les quartiers les plus populaires des grandes villes et à même le trottoir ou dans les villages de « brousse », vous surprendrez bon nombre de joueurs de cartes ou de dominos. Plus traditionnel et original, le Fanorona qui se pratique sur les hautes terres."
+                    android:text="l'artisanat à Madagascar est une activité essentiellement rurale mais gagne en popularité dans les zones urbaines. Traditionnellement utilitaires, les objets artisanaux sont devenus plus décoratifs. La broderie, la production de soie, l'artisanat du bois, la ferblanterie, la vannerie, la bijouterie et la production de papier Antemoro sont quelques-uns des trésors culturels que l'île offre aux visiteurs."
                     android:textColor="@color/white"
                     android:textSize="10sp" />
             </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:fontFamily="@font/dancing_bold"
+                android:gravity="center"
+                android:padding="5dp"
+                android:layout_marginTop="20px"
+                android:text="Le riz et le zébu, symboles de la culture malgache"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="163dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/dm_medium"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Impossible d’évoquer Madagascar sans parler du riz. Le pays vit au rythme des deux saisons du riz (récolte en décembre/janvier et en avril). Les paysages qui sont souvent agrémentés d’un véritable patchwork de petites rizières changent aussi considérablement au fil des saisons. Le zébu quant à lui est omniprésent dans le décor malgache. Le zébu est le symbole de toutes les valeurs. La couleur de sa robe exprime les circonstances joyeuses ou douloureuses de la vie. Les bucranes (crâne et cornes) ornent les tombes. La corrida Betsileo ou « Savika » qui consiste à s’accrocher le plus longtemps possible à la bosse de ces superbes animaux, n’a pour but que de rendre hommage à leur force. Il faut assister à ces représentations, notamment à Fianarantsoa ou dans les villages environnants, quand musique et costumes traditionnels se joignent à la fête. Les zébus sont régulièrement associés aux travaux des champs. Vous verrez de petits troupeaux, harangués par de jeunes gardiens, qui piétinent les sols afin de les préparer au repiquage du riz."
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="170dp"
+                    style="@style/CARD"
+                    android:layout_width="190dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
                     android:layout_marginTop="16dp"
                     app:cardCornerRadius="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="127dp"
-                        android:orientation="horizontal"
+                        android:layout_height="130dp"
+                        android:orientation="vertical"
                         android:padding="14dp">
 
 
                         <ImageView
-                            android:layout_width="133dp"
-                            android:layout_height="95dp"
-                            android:layout_gravity="center"
+                            android:layout_width="159dp"
+                            android:layout_height="102dp"
+                            android:layout_gravity="left"
                             android:layout_marginTop="30px"
                             android:layout_marginBottom="20px"
-                            android:src="@drawable/gastronomie" />
+                            android:src="@drawable/zebu" />
 
 
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_marginTop="20px"
-                    android:fontFamily="@font/dancing_bold"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="La gastronomie malgache"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="278dp"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/dm_medium"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="La cuisine malgache propose des mets traditionnels tels que le Romazava de zébu, accompagné de riz et d'un bouillon clair. Les produits du terroir malgache, comme les fruits, légumes et viandes de zébu, sont réputés pour leur qualité. Des chefs talentueux marient les recettes françaises avec les produits locaux, offrant une expérience gastronomique unique lors d'un voyage à Madagascar. Les amateurs de poissons et de fruits de mer se régaleront le long des côtes, et la cuisine asiatique est également appréciée, notamment les fameuses soupes chinoises à Tamatave."
-                    android:textColor="@color/white"
-                    android:textSize="10sp" />
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:fontFamily="@font/dancing_bold"
+                android:gravity="center"
+                android:padding="5dp"
+                android:layout_marginTop="20px"
+                android:text="Tradition et gastronomie"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="566dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        style="@style/CARD"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        app:cardCornerRadius="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:orientation="horizontal"
+                            android:padding="14dp">
+
+
+                            <ImageView
+                                android:layout_width="159dp"
+                                android:layout_height="102dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="30px"
+                                android:layout_marginBottom="20px"
+                                android:src="@drawable/danse" />
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="20px"
+                        android:fontFamily="@font/dancing_bold"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Traditions et cultures"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="323dp"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/dm_medium"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="De très nombreuses manifestations culturelles ponctuent la vie des différentes ethnies qui peuplent la grande île. Si certaines sont annuelles, plusieurs reviennent selon un cycle plus ou moins long. Le Fanompoambe (bain des reliques royales sakalava) à Mahajanga en juin/juillet. Le Sambatra (circoncision collective Antambahoaka en région Mananjary qui a lieu tous les 7 ans). Dans les quartiers les plus populaires des grandes villes et à même le trottoir ou dans les villages de « brousse », vous surprendrez bon nombre de joueurs de cartes ou de dominos. Plus traditionnel et original, le Fanorona qui se pratique sur les hautes terres."
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        style="@style/CARD"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        app:cardCornerRadius="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="127dp"
+                            android:orientation="horizontal"
+                            android:padding="14dp">
+
+
+                            <ImageView
+                                android:layout_width="133dp"
+                                android:layout_height="95dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="30px"
+                                android:layout_marginBottom="20px"
+                                android:src="@drawable/gastronomie" />
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="20px"
+                        android:fontFamily="@font/dancing_bold"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="La gastronomie malgache"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="278dp"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/dm_medium"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="La cuisine malgache propose des mets traditionnels tels que le Romazava de zébu, accompagné de riz et d'un bouillon clair. Les produits du terroir malgache, comme les fruits, légumes et viandes de zébu, sont réputés pour leur qualité. Des chefs talentueux marient les recettes françaises avec les produits locaux, offrant une expérience gastronomique unique lors d'un voyage à Madagascar. Les amateurs de poissons et de fruits de mer se régaleront le long des côtes, et la cuisine asiatique est également appréciée, notamment les fameuses soupes chinoises à Tamatave."
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+                </LinearLayout>
+            </LinearLayout>
+
         </LinearLayout>
-
-    </LinearLayout>
-
-</ScrollView>
+    </androidx.core.widget.NestedScrollView>
+    <FrameLayout
+        android:id="@+id/footerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -14,5 +14,12 @@ public class Culture extends AppCompatActivity {
         setContentView(R.layout.activity_culture);
 
         getSupportActionBar().hide();
+
+        // Ajouter le FooterFragment dans le conteneur
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.footerFragment, new FooterFragment())
+                    .commit();
+        }
     }
 }
