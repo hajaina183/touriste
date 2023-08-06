@@ -9,7 +9,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="40dp"
         android:orientation="horizontal"
         android:padding="24dp"
         tools:context=".Activite">
@@ -31,7 +31,7 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:padding="20dp"
-                android:src="@drawable/search" />
+                android:src="@drawable/se_deconnecter" />
         </androidx.cardview.widget.CardView>
 
         <!-- Ajout de l'icône de profil -->

@@ -33,12 +33,10 @@ public class ParametreActivity extends AppCompatActivity {
         ListView listView = findViewById(R.id.listview);
 
         List<String> list = new ArrayList<>();
-        list.add("A propos de l'application");
         list.add("Changer de mode");
         list.add("Se deconnecter");
 
         List<Integer> images = new ArrayList<>();
-        images.add(R.drawable.application);
         images.add(R.drawable.parametres);
         images.add(R.drawable.se_deconnecter);
 
@@ -49,12 +47,9 @@ public class ParametreActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) {
-                    //apropos de l'appli
-                    startActivity(new Intent(ParametreActivity.this, AppleActivity.class));
-                } else if (position == 1) {
                     //changer mode
                     startActivity(new Intent(ParametreActivity.this, LoginActivity.class));
-                }else if (position == 2) {
+                }else if (position == 1) {
                     //se deconnecter
                     SharedPreferences sharedPreferences = getSharedPreferences("SessionPrefs", Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedPreferences.edit();

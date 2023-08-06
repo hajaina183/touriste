@@ -42,6 +42,12 @@ public class DetailParc2 extends AppCompatActivity {
 
             getSupportActionBar().hide();
 
+            if (savedInstanceState == null) {
+                getSupportFragmentManager().beginTransaction()
+                        .add(R.id.footerFragment, new FooterFragment())
+                        .commit();
+            }
+
             ImageView imageViewSend = findViewById(R.id.imageViewSend);
 
             TextView titre = findViewById(R.id.titre);
@@ -94,10 +100,6 @@ public class DetailParc2 extends AppCompatActivity {
                             commentaire.setText(commentaires.get(i).getText());
                             commentaire.setUser(commentaires.get(i).getUser());
 
-                            // Affichage du contenu dans la console (Logcat)
-                            Log.d("Commentaire", "Date: " + commentaire.getDate());
-                            Log.d("Commentaire", "Texte: " + commentaire.getText());
-                            Log.d("Commentaire", "Utilisateur: " + commentaire.getUser());
                         }
                         //commentaireAdapter.setCommentairesList(commentaires);
                         recyclerViewCommentaires = findViewById(R.id.recyclerViewCommentaires);
