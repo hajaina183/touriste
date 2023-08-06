@@ -1,5 +1,6 @@
 package com.example.application.controler;
 
+import com.example.application.model.Commentaire;
 import com.example.application.model.Parc;
 import com.example.application.model.Profil;
 import com.example.application.model.Site;
@@ -11,6 +12,7 @@ import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
 import retrofit2.http.PUT;
 
 public interface SiteController {
@@ -21,4 +23,8 @@ public interface SiteController {
     @FormUrlEncoded
     @PUT("site/insertCommentaireSite")
     Call<Profil> insertCommentaireSite(@Field("nom") String nom, @Field("date") Date date, @Field("text") String text, @Field("user") String user );
+
+    @FormUrlEncoded
+    @POST("site/listeCommentaire")
+    Call<List<Commentaire>> getAllCommentaire(@Field("nom") String nom);
 }
