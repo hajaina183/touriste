@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitClient {
 
     private static Retrofit retrofit;
-    private static String BASE_URL = "http://192.168.172.68:3000/";
+    private static String BASE_URL = "https://touriste-madagascar-webservice.onrender.com/";
 
     public static Retrofit getRetrofitInstance(){
         if(retrofit == null){
