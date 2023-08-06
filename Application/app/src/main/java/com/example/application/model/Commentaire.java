@@ -2,6 +2,7 @@ package com.example.application.model;
 
 import com.example.application.RetrofitClient;
 import com.example.application.controler.ParcController;
+import com.example.application.controler.PlageController;
 
 import java.util.List;
 
@@ -37,9 +38,15 @@ public class Commentaire {
         this.user = user;
     }
 
-    public void getCommentaires(String nomParc, Callback<List<Commentaire>> callback) {
+    public void getCommentairesParc(String nomParc, Callback<List<Commentaire>> callback) {
         ParcController parcController = RetrofitClient.getRetrofitInstance().create(ParcController.class);
         Call<List<Commentaire>> call = parcController.getAllCommentaire(nomParc);
+        call.enqueue(callback);
+    }
+
+    public void getCommentairesPlage(String nomPlage, Callback<List<Commentaire>> callback) {
+        PlageController plageController = RetrofitClient.getRetrofitInstance().create(PlageController.class);
+        Call<List<Commentaire>> call = plageController.getAllCommentaire(nomPlage);
         call.enqueue(callback);
     }
 }

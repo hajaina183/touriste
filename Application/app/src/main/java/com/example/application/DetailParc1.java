@@ -99,7 +99,7 @@ public class DetailParc1 extends AppCompatActivity {
         // Configurer la RecyclerView
 
         Commentaire com = new Commentaire();
-        com.getCommentaires("Croc Farm", new Callback<List<Commentaire>>() {
+        com.getCommentairesParc("Croc Farm", new Callback<List<Commentaire>>() {
             @Override
             public void onResponse(Call<List<Commentaire>> call, Response<List<Commentaire>> response) {
                 if (response.isSuccessful()) {
@@ -184,6 +184,29 @@ public class DetailParc1 extends AppCompatActivity {
         }
     }
 
+    // Méthode pour convertir une chaîne de date en format normal
+    public static String convertDateStringToNormalFormat(String dateString) {
+        String[] inputPatterns = {
+                "yyyy-MM-dd'T'HH:mm:ss.SSSXXX",
+                "EEE MMM dd HH:mm:ss zzz yyyy"
+        };
+        String outputPattern = "dd MMMM yyyy HH:mm"; // Format souhaité, par exemple : "08 août 2023 23:18"
+
+        SimpleDateFormat outputFormat = new SimpleDateFormat(outputPattern, Locale.FRANCE);
+
+        for (String inputPattern : inputPatterns) {
+            SimpleDateFormat inputFormat = new SimpleDateFormat(inputPattern, Locale.US);
+            try {
+                Date date = inputFormat.parse(dateString);
+                return outputFormat.format(date);
+            } catch (ParseException e) {
+                // Ignorer cette exception et essayer un autre format d'entrée
+            }
+        }
+
+        return ""; // Gestion de l'erreur en cas d'échec de la conversion
+    }
+
     // Classe Adapter personnalisée pour la RecyclerView
     private class CommentaireAdapter extends RecyclerView.Adapter<CommentaireAdapter.CommentaireViewHolder> {
 
@@ -209,7 +232,7 @@ public class DetailParc1 extends AppCompatActivity {
         public void onBindViewHolder(@NonNull CommentaireViewHolder holder, int position) {
             Commentaire commentaire = commentairesList.get(position);
             holder.textViewUser.setText(commentaire.getUser());
-            holder.textViewDate.setText(commentaire.getDate());
+            holder.textViewDate.setText(convertDateStringToNormalFormat(commentaire.getDate()));
             holder.textViewText.setText(commentaire.getText());
         }
 

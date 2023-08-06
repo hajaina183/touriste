@@ -1,18 +1,24 @@
 package com.example.application;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.application.model.Commentaire;
 import com.example.application.model.Parc;
 import com.example.application.model.Plage;
 
@@ -29,6 +35,7 @@ import retrofit2.Response;
 public class DetailPlage3 extends AppCompatActivity {
 
     private  String nomParc = "";
+    private RecyclerView recyclerViewCommentaires;
     private static final String TAG = "DetailPlage3";
 
     @Override
@@ -74,6 +81,45 @@ public class DetailPlage3 extends AppCompatActivity {
             }
         });
 
+        Commentaire com = new Commentaire();
+        com.getCommentairesPlage("Plage de l'archipel", new Callback<List<Commentaire>>() {
+            @Override
+            public void onResponse(Call<List<Commentaire>> call, Response<List<Commentaire>> response) {
+                if (response.isSuccessful()) {
+                    Log.e(TAG, "taille commentaire ooooo ???????????? " + response.body().size());
+                    List<Commentaire> commentaires = response.body();
+                    for (int i = 0; i < commentaires.size(); i++) {
+                        Commentaire commentaire = new Commentaire();
+
+                        // Récupération des informations du commentaire
+                        commentaire.setDate(commentaires.get(i).getDate());
+                        commentaire.setText(commentaires.get(i).getText());
+                        commentaire.setUser(commentaires.get(i).getUser());
+
+                        // Affichage du contenu dans la console (Logcat)
+                        Log.d("Commentaire", "Date: " + commentaire.getDate());
+                        Log.d("Commentaire", "Texte: " + commentaire.getText());
+                        Log.d("Commentaire", "Utilisateur: " + commentaire.getUser());
+                    }
+                    //commentaireAdapter.setCommentairesList(commentaires);
+                    recyclerViewCommentaires = findViewById(R.id.recyclerViewCommentaires);
+                    recyclerViewCommentaires.setLayoutManager(new LinearLayoutManager(DetailPlage3.this));
+
+                    // Créer et configurer l'adapter personnalisé pour la RecyclerView
+                    DetailPlage3.CommentaireAdapter commentaireAdapter = new DetailPlage3.CommentaireAdapter(commentaires);
+                    recyclerViewCommentaires.setAdapter(commentaireAdapter);
+
+                } else {
+                    Log.e(TAG, "dans else commentaire");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Commentaire>> call, Throwable t) {
+
+            }
+        });
+
         imageViewSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -112,6 +158,76 @@ public class DetailPlage3 extends AppCompatActivity {
         } catch (ParseException e) {
             e.printStackTrace();
             return null;
+        }
+    }
+
+    public static String convertDateStringToNormalFormat(String dateString) {
+        String[] inputPatterns = {
+                "yyyy-MM-dd'T'HH:mm:ss.SSSXXX",
+                "EEE MMM dd HH:mm:ss zzz yyyy"
+        };
+        String outputPattern = "dd MMMM yyyy HH:mm"; // Format souhaité, par exemple : "08 août 2023 23:18"
+
+        SimpleDateFormat outputFormat = new SimpleDateFormat(outputPattern, Locale.FRANCE);
+
+        for (String inputPattern : inputPatterns) {
+            SimpleDateFormat inputFormat = new SimpleDateFormat(inputPattern, Locale.US);
+            try {
+                Date date = inputFormat.parse(dateString);
+                return outputFormat.format(date);
+            } catch (ParseException e) {
+                // Ignorer cette exception et essayer un autre format d'entrée
+            }
+        }
+
+        return ""; // Gestion de l'erreur en cas d'échec de la conversion
+    }
+
+    // Classe Adapter personnalisée pour la RecyclerView
+    private class CommentaireAdapter extends RecyclerView.Adapter<DetailPlage3.CommentaireAdapter.CommentaireViewHolder> {
+
+        private List<Commentaire> commentairesList;
+
+        CommentaireAdapter(List<Commentaire> commentairesList) {
+            this.commentairesList = commentairesList;
+        }
+
+        public void setCommentairesList(List<Commentaire> commentairesList) {
+            this.commentairesList = commentairesList;
+            notifyDataSetChanged(); // Notifier la RecyclerView du changement de données
+        }
+
+        @NonNull
+        @Override
+        public DetailPlage3.CommentaireAdapter.CommentaireViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_commentaire, parent, false);
+            return new DetailPlage3.CommentaireAdapter.CommentaireViewHolder(view);
+        }
+
+        @Override
+        public void onBindViewHolder(@NonNull DetailPlage3.CommentaireAdapter.CommentaireViewHolder holder, int position) {
+            Commentaire commentaire = commentairesList.get(position);
+            holder.textViewUser.setText(commentaire.getUser());
+            holder.textViewDate.setText(convertDateStringToNormalFormat(commentaire.getDate()));
+            holder.textViewText.setText(commentaire.getText());
+        }
+
+        @Override
+        public int getItemCount() {
+            return commentairesList.size();
+        }
+
+        // Classe ViewHolder pour les éléments de la RecyclerView
+        class CommentaireViewHolder extends RecyclerView.ViewHolder {
+
+            TextView textViewUser, textViewDate, textViewText;
+
+            CommentaireViewHolder(View itemView) {
+                super(itemView);
+                textViewUser = itemView.findViewById(R.id.textViewUser);
+                textViewDate = itemView.findViewById(R.id.textViewDate);
+                textViewText = itemView.findViewById(R.id.textViewText);
+            }
         }
     }
 
