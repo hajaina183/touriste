@@ -80,21 +80,21 @@
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_marginTop="20dp"
                             android:hint="Nom"
+                            android:textColorHint="@color/black"
                             app:boxCornerRadiusBottomEnd="8dp"
                             app:boxCornerRadiusTopEnd="8dp"
                             app:boxCornerRadiusBottomStart="8dp"
                             app:boxCornerRadiusTopStart="8dp"
-
-
-
                             app:hintTextColor="@color/black">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/nom"
                                 android:layout_width="match_parent"
                                 android:layout_height="66dp"
+                                android:textColor="@color/black"
                                 android:drawableStart="@drawable/baseline_person_24"
                                 android:drawablePadding="5dp"
+                                android:backgroundTint="@color/black"
                                 android:drawableTint="@color/app_color"
                                 android:inputType="text"
                                 android:layout_marginLeft="10dp"
@@ -111,21 +111,21 @@
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_marginTop="20dp"
                             android:hint="Prénom"
+                            android:textColorHint="@color/black"
                             app:boxCornerRadiusBottomEnd="8dp"
                             app:boxCornerRadiusTopEnd="8dp"
                             app:boxCornerRadiusBottomStart="8dp"
                             app:boxCornerRadiusTopStart="8dp"
-
-
-
                             app:hintTextColor="@color/black">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/prenom"
                                 android:layout_width="match_parent"
                                 android:layout_height="66dp"
+                                android:textColor="@color/black"
                                 android:drawableStart="@drawable/baseline_person_24"
                                 android:drawablePadding="5dp"
+                                android:backgroundTint="@color/black"
                                 android:drawableTint="@color/app_color"
                                 android:inputType="text"
                                 android:layout_marginLeft="10dp"
@@ -143,19 +143,19 @@
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_marginTop="20dp"
                             android:hint="Adresse"
+                            android:textColorHint="@color/black"
                             app:boxCornerRadiusBottomEnd="8dp"
                             app:boxCornerRadiusTopEnd="8dp"
                             app:boxCornerRadiusBottomStart="8dp"
                             app:boxCornerRadiusTopStart="8dp"
-
-
-
                             app:hintTextColor="@color/black">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/adresse"
                                 android:layout_width="match_parent"
                                 android:layout_height="66dp"
+                                android:textColor="@color/black"
+                                android:backgroundTint="@color/black"
                                 android:drawableStart="@drawable/baseline_person_24"
                                 android:drawablePadding="5dp"
                                 android:drawableTint="@color/app_color"
@@ -174,19 +174,19 @@
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_marginTop="20dp"
                             android:hint="User"
+                            android:textColorHint="@color/black"
                             app:boxCornerRadiusBottomEnd="8dp"
                             app:boxCornerRadiusTopEnd="8dp"
                             app:boxCornerRadiusBottomStart="8dp"
                             app:boxCornerRadiusTopStart="8dp"
-
-
-
                             app:hintTextColor="@color/black">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/user"
+                                android:textColor="@color/black"
                                 android:layout_width="match_parent"
                                 android:layout_height="66dp"
+                                android:backgroundTint="@color/black"
                                 android:drawableStart="@drawable/baseline_person_24"
                                 android:drawablePadding="5dp"
                                 android:drawableTint="@color/app_color"
@@ -208,6 +208,7 @@
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_marginTop="20dp"
                             android:hint="Mot de passe"
+                            android:textColorHint="@color/black"
                             app:boxCornerRadiusBottomEnd="8dp"
                             app:boxCornerRadiusTopEnd="8dp"
                             app:boxCornerRadiusBottomStart="8dp"
@@ -217,10 +218,12 @@
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/password"
+                                android:textColor="@color/black"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:drawableTint="@color/app_color"
                                 android:drawablePadding="5dp"
+                                android:backgroundTint="@color/black"
                                 android:inputType="textPassword"
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginRight="10dp"
