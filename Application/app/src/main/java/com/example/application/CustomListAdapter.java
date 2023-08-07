@@ -71,7 +71,7 @@ public class CustomListAdapter extends ArrayAdapter<String> {
         imageView.setImageResource(images.get(position));
 
         // Afficher le switcher uniquement pour la deuxième ligne (position == 1)
-        if (position == 1) {
+        if (position == 0) {
             switcherContainer.setVisibility(View.VISIBLE);
             textView.setVisibility(View.GONE); // Masquer le libellé pour la deuxième ligne
         } else {
